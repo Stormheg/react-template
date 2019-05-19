@@ -1,0 +1,116 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+  box-sizing: border-box;
+  font-size: $font-size;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $body-color;
+  font-family: $font-family;
+  line-height: $line-height;
+  background-color: $body-bg;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: $font-weight-bold;
+  line-height: 6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.5rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #e6ecf0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  dt {
+    width: 50%;
+    float: left;
+    clear: left;
+    font-weight: 500;
+
+    &::after {
+      content: ':';
+    }
+  }
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+ul {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+ol {
+  margin-left: 1rem;
+  list-style-type: decimal;
+}

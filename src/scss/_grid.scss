@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $grid-max-width;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// media queries
+
+@mixin break($size) {
+
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// loop over the breakpoints
+
+@each $key, $value in $breakpoints {
+
+  @for $i from 1 through $grid-columns {
+
+    .col--#{$key}-#{$i} {
+      flex: 0 0 100%;
+
+      @include break($key) {
+        flex: 0 0 #{$i / $grid-columns * 100%};
+      }
+    }
+  }
+}
