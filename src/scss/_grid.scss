@@ -16,14 +16,14 @@
 
 @mixin break($size) {
 
-  @media (min-width: map-get($breakpoints, $size)) {
+  @media (min-width: map-get($grid-breakpoints, $size)) {
     @content;
   }
 }
 
 // loop over the breakpoints
 
-@each $key, $value in $breakpoints {
+@each $key, $value in $grid-breakpoints {
 
   @for $i from 1 through $grid-columns {
 
