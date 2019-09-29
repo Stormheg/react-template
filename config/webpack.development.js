@@ -12,5 +12,6 @@ module.exports = merge(common, {
     contentBase: path.resolve(process.cwd(), 'dist/'),
     compress: true,
     port: 8080,
+    stats: 'errors-warnings',
   },
 });
